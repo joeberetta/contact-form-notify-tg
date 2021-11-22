@@ -33,7 +33,7 @@ const prepareTelegramMessage = (url, input) => {
  * @param {SendMessageOptions} options
  */
 module.exports.sendMessage = async (input, options) => {
-  const {chatId, fromSiteUrl, botToken} = options
+  const { chatId, fromSiteUrl, botToken } = options
 
   try {
     await https.post(`${TELEGRAM_URL}${botToken}/sendMessage`).send({
